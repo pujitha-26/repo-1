@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Subject</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Subject</h1>
+        <div class="subjects">
+            <button onclick="startQuiz('c')">C</button>
+            <button onclick="startQuiz('cpp')">C++</button>
+            <button onclick="startQuiz('java')">Java</button>
+            <button onclick="startQuiz('python')">Python</button><br>
+            <button onclick="startQuiz('web')">Web Technologies</button><br>
+            <button onclick="startQuiz('cyber')">Cyber Security</button>
+        </div>
+    </div>
+
+    <script>
+        function startQuiz(subject) {
+            localStorage.setItem("selectedSubject", subject);
+            window.location.href = "quiz.html";
+        }
+    </script>
+</body>
+</html>
